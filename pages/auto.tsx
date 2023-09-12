@@ -7,6 +7,7 @@ import {
   BiLogoApple,
 } from "react-icons/bi";
 
+
 const Auto = () => {
   return (
     <div className="w-[375px] h-[4710px] relative overflow-hidden bg-white">
