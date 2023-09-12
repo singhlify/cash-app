@@ -90,14 +90,14 @@ export default function Home() {
 
           <div className="flex flex-col items-center justify-center gap-4 mt-4 z-[2] md:absolute md:left-16 md:bottom-6 md:flex-row">
             <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-black border border-white">
-              <BiLogoApple className="text-[#00D54B] text-3xl" />
+              <BiLogoApple className="text-cash-green text-3xl" />
               <span className="text-xs font-black text-center uppercase text-white">
                 App Store
               </span>
             </button>
 
             <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-black border border-white">
-              <BiLogoPlayStore className="text-[#00D54B] text-3xl" />
+              <BiLogoPlayStore className="text-cash-green text-3xl" />
               <span className="text-xs font-black text-center uppercase text-white">
                 Google Play
               </span>
@@ -145,23 +145,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-[777px] mx-auto mt-auto relative overflow-hidden w-full bg-[#F8F6F6] lg:h-[750px]">
+      <section className="min-h-[777px] mx-auto mt-auto relative overflow-hidden w-full bg-payments-white lg:h-[750px]">
         <FeatureText
           title={homePageContent.payments.title}
           description={homePageContent.payments.description}
         />
 
         <div className="w-[2006px] h-[730px] absolute translate-x-[-57%] md:top-[116px] md:translate-x-[-50%] md:left-[33%]">
-          <div className="absolute top-[115px] left-[859px]">
-            <FeatureText
-              title={homePageContent.payments.title}
-              description={homePageContent.payments.description}
-              position={{
-                top: 115,
-                left: 859,
-              }}
-            />
-          </div>
+          <FeatureText
+            title={homePageContent.payments.title}
+            description={homePageContent.payments.description}
+            position="top-[115px] left-[859px]"
+          />
 
           <Image
             alt="decorative image"
@@ -236,23 +231,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-[777px] mx-auto mt-auto relative overflow-hidden w-full bg-[#00D54B] md:h-[750px]">
+      <section className="min-h-[777px] mx-auto mt-auto relative overflow-hidden w-full bg-cash-green md:h-[750px]">
         <FeatureText
           title={homePageContent.banking.title}
           description={homePageContent.banking.description}
         />
 
         <div className="w-[1358px] h-[865.92px] absolute top-[33px] translate-x-[-42%] md:top-0 md:translate-x-[-50%] md:left-[47%]">
-          <div className="top-[307px] left-[284px]">
-            <FeatureText
-              title={homePageContent.banking.title}
-              description={homePageContent.banking.description}
-              position={{
-                top: 307,
-                left: 284,
-              }}
-            />
-          </div>
+          <FeatureText
+            title={homePageContent.banking.title}
+            description={homePageContent.banking.description}
+            position="top-[307px] left-[284px]"
+          />
 
           <Image
             alt="decorative image"
@@ -355,16 +345,11 @@ export default function Home() {
         />
 
         <div className="w-[1658px] h-[897.83px] absolute top-[104px] translate-x-[-40%] md:top-0 md:translate-x-[-50%] md:left-[50%]">
-          <div className="absolute top-[236px] left-[382px]">
-            <FeatureText
-              title={homePageContent.cashCard.title}
-              description={homePageContent.cashCard.description}
-              position={{
-                top: 236,
-                left: 382,
-              }}
-            />
-          </div>
+          <FeatureText
+            title={homePageContent.cashCard.title}
+            description={homePageContent.cashCard.description}
+            position="top-[236px] left-[382px]"
+          />
 
           <Image
             alt="decorative image"
@@ -425,7 +410,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-[777px] mx-auto mt-auto relative overflow-hidden w-full bg-[#00D54B] lg:min-h-[750px]">
+      <section className="min-h-[777px] mx-auto mt-auto relative overflow-hidden w-full bg-cash-green lg:min-h-[750px]">
         <h2 className="text-[40px] text-center font-black text-white mt-4 lg:mt-[131px]">
           Investing
         </h2>
@@ -481,14 +466,14 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center gap-5 w-full mt-auto mb-11 p-4 z-[5] lg:max-w-[80%] lg:flex-row lg:justify-between lg:items-end lg:py-0 lg:mb-4 lg:mx-auto">
             <div className="flex flex-col items-center justify-center gap-4 mt-4 mb-12 z-[2] lg:m-0 lg:flex-row">
               <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-white border border-black">
-                <BiLogoApple className="text-[#00D54B] text-3xl" />
+                <BiLogoApple className="text-cash-green text-3xl" />
                 <span className="text-xs font-black text-center uppercase text-black">
                   App Store
                 </span>
               </button>
 
               <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-white border border-black">
-                <BiLogoPlayStore className="text-[#00D54B] text-3xl" />
+                <BiLogoPlayStore className="text-cash-green text-3xl" />
                 <span className="text-xs font-black text-center uppercase text-black">
                   Google Play
                 </span>

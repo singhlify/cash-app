@@ -25,44 +25,44 @@ export const introPillarLg = getImageCompletePath("/hero/lg/intro-pillar.png");
 
 // Payments
 export const paymentsColumn = getImageCompletePath(
-  "/payments/payments-column.png"
+  "/payments/payments-column.png",
 );
 export const paymentsPhone = getImageCompletePath(
-  "/payments/payments-phone.png"
+  "/payments/payments-phone.png",
 );
 export const paymentsPillarLarge = getImageCompletePath(
-  "/payments/payments-pillar-large.png"
+  "/payments/payments-pillar-large.png",
 );
 export const paymentsPillarMedium = getImageCompletePath(
-  "/payments/payments-pillar-medium.png"
+  "/payments/payments-pillar-medium.png",
 );
 export const paymentsPillarSmall = getImageCompletePath(
-  "/payments/payments-pillar-small.png"
+  "/payments/payments-pillar-small.png",
 );
 
 // Banking
 export const bankingColumn = getImageCompletePath(
-  "/banking/banking-column.png"
+  "/banking/banking-column.png",
 );
 export const bankingCubes = getImageCompletePath("/banking/banking-cubes.png");
 export const bankingHole = getImageCompletePath("/banking/banking-hole.png");
 export const bankingMonster = getImageCompletePath(
-  "/banking/banking-monster.png"
+  "/banking/banking-monster.png",
 );
 export const bankingPhone = getImageCompletePath("/banking/banking-phone.png");
 export const bankingRamp1 = getImageCompletePath("/banking/banking-ramp-1.png");
 export const bankingRamp2 = getImageCompletePath("/banking/banking-ramp-2.png");
 export const bankingStairs1 = getImageCompletePath(
-  "/banking/banking-stairs-1.png"
+  "/banking/banking-stairs-1.png",
 );
 export const bankingStairs2 = getImageCompletePath(
-  "/banking/banking-stairs-2.png"
+  "/banking/banking-stairs-2.png",
 );
 export const bankingTrack1 = getImageCompletePath(
-  "/banking/banking-track-1.png"
+  "/banking/banking-track-1.png",
 );
 export const bankingTrack2 = getImageCompletePath(
-  "/banking/banking-track-2.png"
+  "/banking/banking-track-2.png",
 );
 export const bankingTube = getImageCompletePath("/banking/banking-tube.png");
 
@@ -78,21 +78,21 @@ export const boostStairs2 = getImageCompletePath("/boost/boost-stairs-2.png");
 
 // Investing
 export const investingBitcoin = getImageCompletePath(
-  "/investing/investing-bitcoin.png"
+  "/investing/investing-bitcoin.png",
 );
 export const investingStocks = getImageCompletePath(
-  "/investing/investing-stocks.png"
+  "/investing/investing-stocks.png",
 );
 export const investingFloor = getImageCompletePath(
-  "/investing/investing-floor.svg"
+  "/investing/investing-floor.svg",
 );
 
 export const investingGraph1 = getImageCompletePath(
-  "/investing/investing-graph-1.png"
+  "/investing/investing-graph-1.png",
 );
 export const investingGraph2 = getImageCompletePath(
-  "/investing/investing-graph-2.png"
+  "/investing/investing-graph-2.png",
 );
 export const investingGraph3 = getImageCompletePath(
-  "/investing/investing-graph-3.png"
+  "/investing/investing-graph-3.png",
 );

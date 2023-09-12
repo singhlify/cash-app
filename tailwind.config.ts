@@ -6,5 +6,13 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  theme: {
+    extend: {
+      colors: {
+        "cash-green": "#00d54b",
+        "payments-white": "#F8F6F6",
+      },
+    },
+  },
 };
 export default config;

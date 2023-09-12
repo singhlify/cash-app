@@ -7,10 +7,7 @@ interface FeatureTextProps {
     text: string;
     color: string;
   };
-  position?: {
-    top: number;
-    left: number;
-  };
+  position?: string;
 }
 
 export const FeatureText = ({
@@ -22,33 +19,30 @@ export const FeatureText = ({
     text: "",
     color: "",
   },
-  position = {
-    top: 0,
-    left: 0,
-  },
+  position = "",
 }: FeatureTextProps): JSX.Element => {
-  if (position?.top) {
+  if (position) {
     return (
       <div
-        className={`hidden md:flex flex-col z-[1] leading-normal justify-center w-[352px] absolute top-[${position.top}px] left-[${position.left}px]`}
+        className={`hidden md:flex flex-col z-[3] leading-normal justify-center w-[352px] absolute ${position}`}
       >
-        <h2 className={`font-bold text-left text-${title?.color} text-[40px]`}>
-          {title?.text}
+        <h2 className={`font-bold text-left ${title.color} text-[40px]`}>
+          {title.text}
         </h2>
-        <p className={`text-base text-left text-${description?.color}`}>
-          {description?.text}
+        <p className={`text-base text-left text-${description.color}`}>
+          {description.text}
         </p>
       </div>
     );
   }
 
   return (
-    <div className="leading-normal flex flex-col z-[1] justify-center p-4 mb-7 md:hidden">
-      <h2 className={`font-bold text-left text-${title?.color} text-[40px]`}>
-        {title?.text}
+    <div className="leading-normal flex flex-col z-[3] justify-center p-4 mb-7 md:hidden">
+      <h2 className={`font-bold text-left ${title.color} text-[40px]`}>
+        {title.text}
       </h2>
-      <p className={`text-base text-left text-${description?.color}`}>
-        {description?.text}
+      <p className={`text-base text-left text-${description.color}`}>
+        {description.text}
       </p>
     </div>
   );
