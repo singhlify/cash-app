@@ -49,6 +49,7 @@ import {
 import { FeatureText, HeroBgImages } from "@/components";
 import { homePageContent } from "@/constants";
 import { isMobile, useGetScreenSize } from "@/utils";
+import Link from "next/link";
 
 const workSans = Work_Sans({ subsets: ["latin"] });
 
@@ -64,6 +65,28 @@ export default function Home() {
           alt="decorative image"
           fill
         />
+
+        <nav className="hidden md:flex justify-start items-center gap-5 absolute z-10 top-9 left-0 right-0 mx-auto w-fit ">
+          {[
+            "Sign In",
+            "Legal",
+            "Licenses",
+            "Security",
+            "Careers",
+            "Press",
+            "Support",
+            "Status",
+            "Codeblog",
+          ].map((item) => (
+            <Link
+              key={item}
+              href="#"
+              className="flex-grow-0 flex-shrink-0 text-sm font-black text-left uppercase text-white hover:underline"
+            >
+              {item}
+            </Link>
+          ))}
+        </nav>
 
         <div className="w-[1366px] h-screen mx-auto relative flex flex-col justify-center z-[2]">
           <div className="relative flex flex-col w-full mx-auto font-black text-center uppercase text-white text-[120px] z-[2] lg:text-[193px]">
@@ -89,14 +112,14 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-4 mt-4 z-[2] md:absolute md:left-16 md:bottom-6 md:flex-row">
-            <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-black border border-white">
+            <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-black border border-white hover:cursor-pointer">
               <BiLogoApple className="text-cash-green text-3xl" />
               <span className="text-xs font-black text-center uppercase text-white">
                 App Store
               </span>
             </button>
 
-            <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-black border border-white">
+            <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-black border border-white hover:cursor-pointer">
               <BiLogoPlayStore className="text-cash-green text-3xl" />
               <span className="text-xs font-black text-center uppercase text-white">
                 Google Play
@@ -151,7 +174,7 @@ export default function Home() {
           description={homePageContent.payments.description}
         />
 
-        <div className="w-[2006px] h-[730px] absolute translate-x-[-57%] md:top-[116px] md:translate-x-[-50%] md:left-[33%]">
+        <div className="w-[2006px] h-[730px] absolute translate-x-[-57%] md:top-[116px] md:translate-x-[-49%] md:left-[33%]">
           <FeatureText
             title={homePageContent.payments.title}
             description={homePageContent.payments.description}
@@ -465,14 +488,14 @@ export default function Home() {
 
           <div className="flex flex-col items-center justify-center gap-5 w-full mt-auto mb-11 p-4 z-[5] lg:max-w-[80%] lg:flex-row lg:justify-between lg:items-end lg:py-0 lg:mb-4 lg:mx-auto">
             <div className="flex flex-col items-center justify-center gap-4 mt-4 mb-12 z-[2] lg:m-0 lg:flex-row">
-              <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-white border border-black">
+              <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-white border border-black hover:cursor-pointer">
                 <BiLogoApple className="text-cash-green text-3xl" />
                 <span className="text-xs font-black text-center uppercase text-black">
                   App Store
                 </span>
               </button>
 
-              <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-white border border-black">
+              <button className="flex items-center justify-center gap-[25px] min-w-[170px] h-fit py-[13px] px-3 rounded-[7px] bg-white border border-black hover:cursor-pointer">
                 <BiLogoPlayStore className="text-cash-green text-3xl" />
                 <span className="text-xs font-black text-center uppercase text-black">
                   Google Play
