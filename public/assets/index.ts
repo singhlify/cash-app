@@ -1,7 +1,6 @@
 const getImageCompletePath = (path: string) =>
   `${process.env.NEXT_PUBLIC_URL}/assets/images${path}`;
 
-export const introPhone2 = getImageCompletePath("/intro-phone-2.png");
 export const rays = getImageCompletePath("/rays.png");
 
 // Hero

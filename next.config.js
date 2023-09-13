@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "cash-app-lp.vercel.app", "cash-app.singhlify.com"],
   },
 };
 

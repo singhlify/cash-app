@@ -1,4 +1,11 @@
 export const homePageContent = {
+  meta: {
+    title: "Cash App - Payments, Banking, Cash Card & Boost, Stocks, Bitcoin",
+    description:
+      "Experience seamless payments, early direct deposits, customizable Cash Card & Boosts, and easy stock and bitcoin investing with Cash App.",
+    keywords:
+      "Cash App, Payments, Banking, Cash Card, Boost, Stocks, Bitcoin, Direct Deposits, Debit Card, Investing, Digital Payments",
+  },
   payments: {
     title: {
       text: "Payments",
