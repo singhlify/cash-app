@@ -24,12 +24,12 @@ export const FeatureText = ({
   if (position) {
     return (
       <div
-        className={`hidden md:flex flex-col z-[3] leading-normal justify-center w-[352px] absolute ${position}`}
+        className={`absolute z-[3] hidden w-[352px] flex-col justify-center leading-normal md:flex ${position}`}
       >
-        <h2 className={`font-bold text-left ${title.color} text-[40px]`}>
+        <h2 className={`text-left font-bold ${title.color} text-[40px]`}>
           {title.text}
         </h2>
-        <p className={`text-base text-left text-${description.color}`}>
+        <p className={`text-left text-base text-${description.color}`}>
           {description.text}
         </p>
       </div>
@@ -37,11 +37,11 @@ export const FeatureText = ({
   }
 
   return (
-    <div className="leading-normal flex flex-col z-[3] justify-center p-4 mb-7 md:hidden">
-      <h2 className={`font-bold text-left ${title.color} text-[40px]`}>
+    <div className="z-[3] mb-7 flex flex-col justify-center p-4 leading-normal md:hidden">
+      <h2 className={`text-left font-bold ${title.color} text-[40px]`}>
         {title.text}
       </h2>
-      <p className={`text-base text-left text-${description.color}`}>
+      <p className={`text-left text-base text-${description.color}`}>
         {description.text}
       </p>
     </div>
