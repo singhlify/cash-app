@@ -1,5 +1,6 @@
 import { Work_Sans } from "next/font/google";
 import Image from "@/components/Image";
+import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 import {
   introCube,
@@ -51,25 +52,93 @@ import { FeatureText, HeroBgImages } from "@/components";
 import { homePageContent } from "@/constants";
 import { isMobile, useGetScreenSize } from "@/utils";
 import Link from "next/link";
-import { useState } from "react";
-
 const workSans = Work_Sans({ subsets: ["latin"] });
 
 export default function Home() {
   const screenSize = useGetScreenSize();
-  const [mobileNavbarPosition, setMobileNavbarPosition] =
-    useState("right-[-120%]");
-
-  const openMenu = () => {
-    setMobileNavbarPosition("right-0");
-  };
-
-  const closeMenu = () => {
-    setMobileNavbarPosition("right-[-120%]");
-  };
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
     <main className={`${workSans.className}`}>
+      <button
+        className="absolute left-0 right-0 top-9 z-10 mx-auto w-fit border border-white px-3 py-1 md:hidden"
+        type="button"
+        onClick={() => toggleOpen()}
+      >
+        Menu
+      </button>
+
+      <nav className="absolute left-0 right-0 top-9 z-10 mx-auto hidden w-fit items-center justify-start gap-5 md:flex ">
+        {[
+          "Sign In",
+          "Legal",
+          "Licenses",
+          "Security",
+          "Careers",
+          "Press",
+          "Support",
+          "Status",
+          "Codeblog",
+        ].map((item) => (
+          <Link
+            key={item}
+            href="#"
+            className="flex-shrink-0 flex-grow-0 text-left text-sm font-black uppercase text-white hover:underline"
+          >
+            {item}
+          </Link>
+        ))}
+      </nav>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{
+              width: "0",
+              opacity: 0,
+            }}
+            animate={{
+              width: "100vw",
+              opacity: 1,
+            }}
+            exit={{
+              width: "0",
+              opacity: 0,
+            }}
+            className={`{mobileNavbarPosition} fixed z-10 h-screen w-screen overflow-hidden overflow-y-auto bg-black ease-in-out md:hidden`}
+          >
+            <nav className="flex flex-col gap-5 p-[30px] text-left text-[32px] font-black uppercase text-white">
+              <button
+                className="ml-auto"
+                type="button"
+                onClick={() => toggleOpen()}
+              >
+                <BiXCircle />
+              </button>
+              {[
+                "Sign In",
+                "Legal",
+                "Licenses",
+                "Security",
+                "Careers",
+                "Press",
+                "Support",
+                "Status",
+                "Codeblog",
+              ].map((item) => (
+                <Link
+                  key={item}
+                  href="#"
+                  className="flex-shrink-0 flex-grow-0 hover:underline"
+                >
+                  {item}
+                </Link>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <section className="relative mx-auto mt-auto flex min-h-[777px] w-full justify-center overflow-hidden bg-black px-4">
         <Image
           className="absolute !top-[-200px] z-[0] select-none object-cover"
@@ -77,64 +146,6 @@ export default function Home() {
           alt="decorative image"
           fill
         />
-
-        <span
-          className="absolute left-0 right-0 top-9 z-10 mx-auto w-fit hover:cursor-pointer hover:underline md:hidden"
-          onClick={openMenu}
-        >
-          Menu
-        </span>
-
-        <nav className="absolute left-0 right-0 top-9 z-10 mx-auto hidden w-fit items-center justify-start gap-5 md:flex ">
-          {[
-            "Sign In",
-            "Legal",
-            "Licenses",
-            "Security",
-            "Careers",
-            "Press",
-            "Support",
-            "Status",
-            "Codeblog",
-          ].map((item) => (
-            <Link
-              key={item}
-              href="#"
-              className="flex-shrink-0 flex-grow-0 text-left text-sm font-black uppercase text-white hover:underline"
-            >
-              {item}
-            </Link>
-          ))}
-        </nav>
-
-        <div
-          className={`fixed ${mobileNavbarPosition} z-10 h-screen w-screen overflow-hidden overflow-y-auto bg-black ease-in-out md:hidden`}
-        >
-          <nav className="flex flex-col gap-5 p-[30px] text-left text-[32px] font-black uppercase text-white">
-            <button className="ml-auto" type="button" onClick={closeMenu}>
-              <BiXCircle />
-            </button>
-            {[
-              "Sign In",
-              "Legal",
-              "Licenses",
-              "Security",
-              "Careers",
-              "Press",
-              "Support",
-              "Status",
-              "Codeblog",
-            ].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="flex-shrink-0 flex-grow-0 hover:underline"
-              >
-                {item}
-              </Link>
-            ))}
-          </nav>
-        </div>
 
         <div className="relative z-[2] mx-auto flex w-[1366px] flex-col justify-center">
           <div className="relative z-[2] mx-auto flex w-full flex-col text-center text-[120px] font-black uppercase text-white lg:text-[193px]">
@@ -177,9 +188,15 @@ export default function Home() {
 
           <div className="absolute bottom-5 z-[1] mt-4 flex flex-col items-start justify-center gap-4 md:bottom-5 md:right-16 md:flex-row-reverse md:items-center">
             <div className="flex items-center justify-start gap-[30px]">
-              <BiLogoTwitch className="text-3xl" />
-              <BiLogoTwitter className="text-3xl" />
-              <BiLogoInstagram className="text-3xl" />
+              <Link href="#">
+                <BiLogoTwitch className="text-3xl" />
+              </Link>
+              <Link href="#">
+                <BiLogoTwitter className="text-3xl" />
+              </Link>
+              <Link href="#">
+                <BiLogoInstagram className="text-3xl" />
+              </Link>
             </div>
 
             <p className="w-full text-left text-[10px] text-white md:max-w-[363px] ">
@@ -553,9 +570,15 @@ export default function Home() {
 
             <div className="flex flex-col items-center justify-center gap-4 lg:flex-row-reverse">
               <div className="flex items-center justify-start gap-[30px] text-black">
-                <BiLogoTwitch className="text-3xl" />
-                <BiLogoTwitter className="text-3xl" />
-                <BiLogoInstagram className="text-3xl" />
+                <Link href="#">
+                  <BiLogoTwitch className="text-3xl" />
+                </Link>
+                <Link href="#">
+                  <BiLogoTwitter className="text-3xl" />
+                </Link>
+                <Link href="#">
+                  <BiLogoInstagram className="text-3xl" />
+                </Link>
               </div>
 
               <p className="w-full text-left text-[10px] text-black lg:w-[363px]">
