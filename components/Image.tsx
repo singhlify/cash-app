@@ -10,7 +10,7 @@ interface ImageProps {
   fill?: boolean;
 }
 
-const Image = ({
+export const Image = ({
   alt = "",
   src = "",
   width = undefined,
@@ -29,5 +29,3 @@ const Image = ({
     />
   );
 };
-
-export default Image;

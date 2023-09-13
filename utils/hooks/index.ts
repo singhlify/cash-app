@@ -1,1 +1,0 @@
-export { useGetScreenSize } from "./useGetScreenSize";

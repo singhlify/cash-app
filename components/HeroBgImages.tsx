@@ -1,5 +1,5 @@
 import { isMobile, useGetScreenSize } from "@/utils";
-import Image from "./Image";
+import { Image } from "./Image";
 import {
   eye,
   dollarLogo,
