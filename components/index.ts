@@ -3,8 +3,9 @@ export { HeroBgImages } from "./HeroBgImages";
 export { Navbar } from "./Navbar";
 export { Image } from "./Image";
 
-export { HeroSection } from "./HeroSection";
-export { PaymentsSection } from "./PaymentsSection";
-export { BankingSection } from "./BankingSection";
-export { CashCardSection } from "./CashCardSection";
-export { InvestingSection } from "./InvestingSection";
+// Sections
+export { default as HeroSection } from "./sections/HeroSection";
+export { default as PaymentsSection } from "./sections/PaymentsSection";
+export { default as BankingSection } from "./sections/BankingSection";
+export { default as CashCardSection } from "./sections/CashCardSection";
+export { default as InvestingSection } from "./sections/InvestingSection";

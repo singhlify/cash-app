@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 import {
@@ -14,7 +16,7 @@ import { FeatureText, Image } from "@/components";
 import { homePageContent } from "@/constants";
 import { useReveal } from "@/utils";
 
-export const CashCardSection = () => {
+const CashCardSection = () => {
   const revealProps = useReveal();
 
   return (
@@ -94,3 +96,5 @@ export const CashCardSection = () => {
     </section>
   );
 };
+
+export default CashCardSection;

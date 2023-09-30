@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import Link from "next/link";
 import { BiXCircle } from "react-icons/bi";

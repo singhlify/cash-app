@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 import {
@@ -21,7 +23,7 @@ import { homePageContent } from "@/constants";
 import Link from "next/link";
 import { useReveal } from "@/utils";
 
-export const InvestingSection = () => {
+const InvestingSection = () => {
   const { ref, ...revealProps } = useReveal();
 
   return (
@@ -167,3 +169,5 @@ export const InvestingSection = () => {
     </section>
   );
 };
+
+export default InvestingSection;

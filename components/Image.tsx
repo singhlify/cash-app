@@ -8,6 +8,7 @@ interface ImageProps {
   height?: number;
   className?: string;
   fill?: boolean;
+  draggable?: boolean;
 }
 
 export const Image = ({
@@ -21,7 +22,7 @@ export const Image = ({
   return (
     <NextImage
       alt={alt}
-      className={className}
+      className={`select-none ${className}`}
       src={src}
       width={width}
       height={height}

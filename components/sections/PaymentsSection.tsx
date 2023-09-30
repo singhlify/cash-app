@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 import {
@@ -11,7 +13,7 @@ import { FeatureText, Image } from "@/components";
 import { homePageContent } from "@/constants";
 import { useReveal } from "@/utils";
 
-export const PaymentsSection = () => {
+const PaymentsSection = () => {
   const revealProps = useReveal();
 
   return (
@@ -105,3 +107,5 @@ export const PaymentsSection = () => {
     </section>
   );
 };
+
+export default PaymentsSection;

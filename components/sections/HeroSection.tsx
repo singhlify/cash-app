@@ -1,3 +1,5 @@
+"use client";
+
 import {
   introCube,
   introPhone,
@@ -16,7 +18,7 @@ import { HeroBgImages, Image } from "@/components";
 import { isMobile, useGetScreenSize } from "@/utils";
 import Link from "next/link";
 
-export const HeroSection = () => {
+const HeroSection = () => {
   const screenSize = useGetScreenSize();
 
   return (
@@ -114,3 +116,5 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+export default HeroSection;
