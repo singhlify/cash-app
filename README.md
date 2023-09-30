@@ -1,4 +1,4 @@
-# Cash App Landing Page
+# Cash App
 
 ![Cash App Landing Page](https://cash-app-lp.vercel.app/assets/images/cash-app.png)
 
