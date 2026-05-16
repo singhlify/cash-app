@@ -1,6 +1,6 @@
 # Cash App
 
-![Cash App Landing Page](https://cash-app-lp.vercel.app/assets/images/cash-app.png)
+![Cash App Landing Page](https://raw.githubusercontent.com/singhlify/cash-app/52b18cd302b342ebdc3afcd7e1c5fbc1aef67ae9/public/assets/images/cash-app.png)
 
 Welcome to the GitHub repository for the Cash App landing page project. This landing page was built using Next.js, TypeScript, Tailwind CSS, and Framer Motion to create an engaging and responsive user experience. You can view the live demo of the project [here](https://cash-app.singhlify.com/).
 
